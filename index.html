@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Pribadi - Jadwal Harian</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #d3e5f3;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            background: #2c3e50;
+            padding: 15px;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 10px 15px;
+            font-size: 18px;
+        }
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+        .menu {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .profile {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .profile img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #3498db;
+        }
+        .schedule {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .schedule h2 {
+            background: #3498db;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .time-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .time-list li {
+            background: #f1f1f1;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            width: 80%;
+            text-align: center;
+        }
+        .footer {
+            margin-top: 20px;
+            padding: 10px;
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            .menu {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background: #2c3e50;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                text-align: center;
+            }
+            .menu a {
+                padding: 15px;
+                display: block;
+            }
+            .menu-toggle {
+                display: block;
+            }
+            .menu.show {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <div class="menu" id="menu">
+            <a href="#profile">Profil</a>
+            <a href="#schedule">Jadwal</a>
+            <a href="#contact">Kontak</a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="profile" id="profile">
+            <img src="pelix.png" alt="Foto Profil">
+            <h1>Aldian Felix Siallagan</h1>
+            <p>Mahasiswa yang penuh semangat dalam menjalani kehidupan kampus</p>
+        </div>
+        <div class="schedule" id="schedule">
+            <h2>Jadwal Harian</h2>
+            <ul class="time-list">
+                <li>04:30 - Bangun Pagi</li>
+                <li>05:00 - Olahraga</li>
+                <li>06:30 - Makan Pagi</li>
+                <li>07:00 - Apel Pagi</li>
+                <li>08:00 - Sekolah (Pelajaran 1-3)</li>
+                <li>10:30 - Istirahat</li>
+                <li>11:00 - Sekolah (Pelajaran 4-6)</li>
+                <li>13:00 - Makan Siang</li>
+                <li>14:00 - Sekolah (Pelajaran 7-9)</li>
+                <li>16:00 - Olahraga Sore</li>
+                <li>18:00 - Makan Malam</li>
+                <li>19:00 - Apel Malam</li>
+                <li>20:00 - Belajar Mandiri</li>
+                <li>22:00 - Istirahat dan Tidur</li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer" id="contact">
+        <p>Kontak: aldianfelix@example.com</p>
+        <p>&copy; 2025 Aldian Felix Siallagan. Semua Hak Dilindungi.</p>
+    </div>
+    <script>
+        function toggleMenu() {
+            document.getElementById("menu").classList.toggle("show");
+        }
+    </script>
+</body>
+</html>
